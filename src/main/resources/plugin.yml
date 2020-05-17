@@ -1,0 +1,10 @@
+name: VoteParty
+version: 1.0
+api-version: 1.12.2
+author: [brunoxkk0]
+
+depend:
+    - SyrxCore
+    - Votifier
+
+main: br.com.brunoxkk0.voteparty.VoteParty

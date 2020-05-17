@@ -1,0 +1,15 @@
+votes_current: 0
+votes_required: 15
+bar_format: "&3\u279c &lVoteParty&r &fRestam: &3%m&r"
+reward_message: "&8&l[&3&l&oSyrx&b&l&oCraft&8&l] &r&f&l\u279c Meta de votos atingida..."
+reward_commands:
+- give %p diamond
+- give %p diamond
+- give %p diamond
+- give %p diamond
+- give %p diamond
+- give %p diamond
+bar_warn_timer: 1
+bar_color: BLUE
+bar_style: NOTCHED_20
+counter_type: INVERTED
