@@ -1,9 +1,9 @@
-package br.com.brunoxkk0.voteparty;
+package br.dev.brunoxkk0.voteparty;
 
 import br.com.brunoxkk0.helper.ConfigAPI;
 import br.com.brunoxkk0.helper.LoggerHelper;
-import br.com.brunoxkk0.voteparty.core.BarHandlerThread;
-import br.com.brunoxkk0.voteparty.core.VoteHandler;
+import br.dev.brunoxkk0.voteparty.core.BarHandlerThread;
+import br.dev.brunoxkk0.voteparty.core.VoteHandler;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -58,8 +58,6 @@ public class VoteParty extends JavaPlugin{
         barHandlerThread = new BarHandlerThread();
         barHandlerThread.setup();
 
-
-
     }
 
     @Override
@@ -69,7 +67,8 @@ public class VoteParty extends JavaPlugin{
 
         voteHandler.save();
 
-        if(!barHandlerThread.getWarn().isInterrupted()) barHandlerThread.getWarn().interrupt();
+        if(!barHandlerThread.getWarn().isInterrupted())
+            barHandlerThread.getWarn().interrupt();
 
     }
 }

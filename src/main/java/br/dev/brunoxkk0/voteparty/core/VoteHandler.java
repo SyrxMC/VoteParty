@@ -1,6 +1,6 @@
-package br.com.brunoxkk0.voteparty.core;
+package br.dev.brunoxkk0.voteparty.core;
 
-import br.com.brunoxkk0.voteparty.VoteParty;
+import br.dev.brunoxkk0.voteparty.VoteParty;
 import com.vexsoftware.votifier.model.VotifierEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;

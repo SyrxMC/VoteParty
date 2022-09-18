@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'br.com.brunoxkk0'
+group 'br.dev.brunoxkk0'
 version '1.0'
 
 sourceCompatibility = 1.8
@@ -12,8 +12,8 @@ repositories {
     mavenCentral()
 
     maven {
-        name = 'bintray-repo'
-        url = 'https://dl.bintray.com/ichbinjoe/public/'
+        name = 'jitpack.io'
+        url = 'https://jitpack.io'
     }
 
     maven {
@@ -40,7 +40,7 @@ dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
     compileOnly 'org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT'
 
-    compileOnly 'com.vexsoftware:nuvotifier-universal:2.6.0'
+    compileOnly 'com.github.NuVotifier.NuVotifier:nuvotifier-bukkit:2.6.0'
 
     compileOnly fileTree(dir: 'libs', include: '*.jar')
 

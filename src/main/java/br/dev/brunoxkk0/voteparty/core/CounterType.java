@@ -1,4 +1,4 @@
-package br.com.brunoxkk0.voteparty.core;
+package br.dev.brunoxkk0.voteparty.core;
 
 public enum CounterType {
 

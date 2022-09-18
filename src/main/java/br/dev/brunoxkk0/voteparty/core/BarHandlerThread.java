@@ -1,6 +1,6 @@
-package br.com.brunoxkk0.voteparty.core;
+package br.dev.brunoxkk0.voteparty.core;
 
-import br.com.brunoxkk0.voteparty.VoteParty;
+import br.dev.brunoxkk0.voteparty.VoteParty;
 import org.bukkit.Bukkit;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
@@ -40,9 +40,9 @@ public class BarHandlerThread {
                 bar = Bukkit.createBossBar(
 
                         barMessage
-                        .replace("%m",""+VoteHandler.getMissingVotesCount())
-                        .replace("%c",""+VoteHandler.getCurrentVoteCount())
-                        .replace("%r",""+VoteHandler.getRequiredVotesCount())
+                        .replace("%m","" + VoteHandler.getMissingVotesCount())
+                        .replace("%c","" + VoteHandler.getCurrentVoteCount())
+                        .replace("%r","" + VoteHandler.getRequiredVotesCount())
                         .replace("&","\u00a7"),
                         color,
                         style
@@ -56,14 +56,14 @@ public class BarHandlerThread {
                 bar.setVisible(true);
 
                 try {
-                    sleep(15000);
+                    sleep(15000L);
                 } catch (InterruptedException ignored) {}
 
                 bar.setVisible(false);
                 bar.removeAll();
 
                 try {
-                    sleep(bar_warn_timer * 60000);
+                    sleep(bar_warn_timer * 60000L);
                 } catch (InterruptedException ignored) { }
 
                 try {
@@ -81,7 +81,15 @@ public class BarHandlerThread {
     public void processBar(Player player){
         new Thread(() -> {
 
-            BossBar bar = Bukkit.createBossBar(barMessage.replace("%m",""+VoteHandler.getMissingVotesCount()).replace("%c",""+VoteHandler.getCurrentVoteCount()).replace("%r",""+VoteHandler.getRequiredVotesCount()).replace("&","\u00a7"), color, style);
+            BossBar bar = Bukkit.createBossBar(
+                    barMessage
+                            .replace("%m","" + VoteHandler.getMissingVotesCount())
+                            .replace("%c","" + VoteHandler.getCurrentVoteCount())
+                            .replace("%r","" + VoteHandler.getRequiredVotesCount())
+                            .replace("&","\u00a7"),
+                    color,
+                    style
+            );
 
             bar.setProgress(VoteHandler.getVotePercentage(counterType) / 100);
             bar.addPlayer(player);
